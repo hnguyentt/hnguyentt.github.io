@@ -1,0 +1,146 @@
+picture_path: photography
+pictures:
+- filename: evilcat
+  original: evilcat-6000x4500.jpg
+  sizes:
+  - evilcat-2121x1591.jpg
+  - evilcat-4242x3182.jpg
+  - evilcat-1224x918.jpg
+  - evilcat-2999x2249.jpg
+  thumbnail: evilcat-1224x918.jpg
+- filename: cat
+  original: cat-4242x3182.jpg
+  sizes:
+  - cat-2999x2249.jpg
+  - cat-1224x918.jpg
+  - cat-6000x4500.jpg
+  - cat-2121x1591.jpg
+  thumbnail: cat-2121x1591.jpg
+- filename: monster
+  original: monster-6000x4494.jpg
+  sizes:
+  - monster-2999x2246.jpg
+  - monster-4242x3178.jpg
+  - monster-1224x917.jpg
+  - monster-2121x1589.jpg
+  thumbnail: monster-2121x1589.jpg
+- filename: skites
+  original: skites-6000x4500.jpg
+  sizes:
+  - skites-2121x1591.jpg
+  - skites-4242x3182.jpg
+  - skites-1224x918.jpg
+  - skites-2999x2249.jpg
+  thumbnail: skites-1224x918.jpg
+- filename: len
+  original: len-6000x4000.jpg
+  sizes:
+  - len-1224x816.jpg
+  - len-2121x1414.jpg
+  - len-2999x1999.jpg
+  - len-4242x2828.jpg
+  thumbnail: len-1224x816.jpg
+- filename: fern
+  original: fern-4242x2827.jpg
+  sizes:
+  - fern-2121x1414.jpg
+  - fern-6000x3999.jpg
+  - fern-2999x1999.jpg
+  - fern-1224x816.jpg
+  thumbnail: fern-1224x816.jpg
+- filename: dreamcatcher
+  original: dreamcatcher-2999x1999.jpg
+  sizes:
+  - dreamcatcher-2121x1414.jpg
+  - dreamcatcher-6000x4000.jpg
+  - dreamcatcher-4242x2828.jpg
+  - dreamcatcher-1224x816.jpg
+  thumbnail: dreamcatcher-1224x816.jpg
+- filename: nonla
+  original: nonla-6000x4000.jpg
+  sizes:
+  - nonla-4242x2828.jpg
+  - nonla-2999x1999.jpg
+  - nonla-1224x816.jpg
+  - nonla-2121x1414.jpg
+  thumbnail: nonla-2121x1414.jpg
+- filename: turtle
+  original: turtle-2121x1414.jpg
+  sizes:
+  - turtle-1224x816.jpg
+  - turtle-4242x2828.jpg
+  - turtle-6000x4000.jpg
+  - turtle-2999x1999.jpg
+  thumbnail: turtle-1224x816.jpg
+- filename: rooftop
+  original: rooftop-4242x2828.jpg
+  sizes:
+  - rooftop-2121x1414.jpg
+  - rooftop-2999x1999.jpg
+  - rooftop-6000x4000.jpg
+  - rooftop-1224x816.jpg
+  thumbnail: rooftop-1224x816.jpg
+- filename: guava
+  original: guava-6000x4000.jpg
+  sizes:
+  - guava-2121x1414.jpg
+  - guava-2999x1999.jpg
+  - guava-4242x2828.jpg
+  - guava-1224x816.jpg
+  thumbnail: guava-1224x816.jpg
+- filename: rose
+  original: rose-4242x2828.jpg
+  sizes:
+  - rose-2999x1999.jpg
+  - rose-6000x4000.jpg
+  - rose-2121x1414.jpg
+  - rose-1224x816.jpg
+  thumbnail: rose-1224x816.jpg
+- filename: radio
+  original: radio-2999x1999.jpg
+  sizes:
+  - radio-2121x1414.jpg
+  - radio-4242x2828.jpg
+  - radio-1224x816.jpg
+  - radio-6000x4000.jpg
+  thumbnail: radio-1224x816.jpg
+- filename: langco
+  original: langco-2121x1414.jpg
+  sizes:
+  - langco-1224x816.jpg
+  - langco-4242x2827.jpg
+  - langco-2999x1999.jpg
+  - langco-6000x3999.jpg
+  thumbnail: langco-1224x816.jpg
+- filename: chain
+  original: chain-4242x2828.jpg
+  sizes:
+  - chain-2121x1414.jpg
+  - chain-1224x816.jpg
+  - chain-2999x1999.jpg
+  - chain-6000x4000.jpg
+  thumbnail: chain-1224x816.jpg
+- filename: notebook
+  original: notebook-6000x4500.jpg
+  sizes:
+  - notebook-2999x2249.jpg
+  - notebook-1224x918.jpg
+  - notebook-2121x1591.jpg
+  - notebook-4242x3182.jpg
+  thumbnail: notebook-4242x3182.jpg
+- filename: alone
+  original: alone-6000x4000.jpg
+  sizes:
+  - alone-2121x1414.jpg
+  - alone-2999x1999.jpg
+  - alone-4242x2828.jpg
+  - alone-1224x816.jpg
+  thumbnail: alone-1224x816.jpg
+- filename: banaflower
+  original: banaflower-6000x4000.jpg
+  sizes:
+  - banaflower-4242x2828.jpg
+  - banaflower-2121x1414.jpg
+  - banaflower-1224x816.jpg
+  - banaflower-2999x2000.jpg
+  thumbnail: banaflower-2999x2000.jpg

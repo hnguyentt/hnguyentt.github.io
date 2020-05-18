@@ -1,0 +1,104 @@
+picture_path: drawings
+pictures:
+- filename: t1-ballet
+  original: t1-ballet-2120x3000.jpg
+  sizes:
+  - t1-ballet-1500x2123.jpg
+  - t1-ballet-1000x1415.jpg
+  - t1-ballet-450x637.jpg
+  - t1-ballet-750x1061.jpg
+  thumbnail: t1-ballet-750x1061.jpg
+- filename: mountain-echo
+  original: mountain-echo-5922x4000.jpg
+  sizes:
+  - mountain-echo-2960x1999.jpg
+  - mountain-echo-4187x2828.jpg
+  - mountain-echo-2093x1414.jpg
+  thumbnail: mountain-echo-thumbnail.jpg
+- filename: bird
+  original: bird-2772x1999.jpg
+  sizes:
+  - bird-1961x1414.jpg
+  - bird-5547x4000.jpg
+  - bird-3922x2828.jpg
+  thumbnail: bird-thumbnail.jpg
+- filename: lightinforest
+  original: lightinforest-4242x2948.jpg
+  sizes:
+  - lightinforest-1224x851.jpg
+  - lightinforest-2121x1474.jpg
+  - lightinforest-6000x4170.jpg
+  - lightinforest-4242x2948.jpg
+  thumbnail: lightinforest-1224x851.jpg
+- filename: vietai
+  original: vietai-2121x1507.jpg
+  sizes:
+  - vietai-1224x870.jpg
+  - vietai-2999x2131.jpg
+  - vietai-2121x1507.jpg
+  - vietai-4242x3014.jpg
+  thumbnail: vietai-1224x870.jpg
+- filename: lemluoc
+  original: lemluoc-4000x5333.png
+  sizes:
+  - lemluoc-816x1088.png
+  - lemluoc-2828x3771.png
+  - lemluoc-1999x2665.png
+  - lemluoc-1414x1885.png
+  thumbnail: lemluoc-816x1088.png
+- filename: kingcat
+  original: kingcat-4000x5333.jpg
+  sizes:
+  - kingcat-816x1088.jpg
+  - kingcat-1414x1885.jpg
+  - kingcat-1999x2665.jpg
+  - kingcat-2828x3771.jpg
+  thumbnail: kingcat-2828x3771.jpg
+- filename: gau
+  original: gau-4000x5000.jpg
+  sizes:
+  - gau-1999x2499.jpg
+  - gau-4000x5000.jpg
+  - gau-1414x1768.jpg
+  - gau-816x1020.jpg
+  thumbnail: gau-816x1020.jpg
+- filename: lonelygirl
+  original: lonelygirl-4242x3051.jpg
+  sizes:
+  - lonelygirl-2999x2157.jpg
+  - lonelygirl-2121x1526.jpg
+  - lonelygirl-1224x880.jpg
+  - lonelygirl-4242x3051.jpg
+  thumbnail: lonelygirl-4242x3051.jpg
+- filename: beach
+  original: beach-6000x4500.jpg
+  sizes:
+  - beach-2121x1591.jpg
+  - beach-4242x3182.jpg
+  - beach-6000x4500.jpg
+  - beach-1224x918.jpg
+  thumbnail: beach-1224x918.jpg
+- filename: fragile
+  original: fragile-6000x4500.jpg
+  sizes:
+  - fragile-816x612.jpg
+  - fragile-1961x1471.jpg
+  - fragile-3922x2942.jpg
+  - fragile-2772x2079.jpg
+  thumbnail: fragile-2772x2079.jpg
+- filename: pitpull
+  original: pitpull-6000x6000.jpg
+  sizes:
+  - pitpull-1224x1224.jpg
+  - pitpull-2999x2999.jpg
+  - pitpull-2121x2121.jpg
+  - pitpull-4242x4242.jpg
+  thumbnail: pitpull-1224x1224.jpg
+- filename: autumn
+  original: autumn-6000x4249.jpg
+  sizes:
+  - autumn-4242x3004.jpg
+  - autumn-1224x867.jpg
+  - autumn-2121x1502.jpg
+  - autumn-2999x2124.jpg
+  thumbnail: autumn-2999x2124.jpg

@@ -1,0 +1,23 @@
+-
+ title: Drawings
+ directory: drawings
+ preview:
+  filename: lightinforest
+  original: lightinforest-4242x2948.jpg
+  sizes:
+   - lightinforest-1224x851.jpg
+   - lightinforest-2121x1474.jpg
+   - lightinforest-6000x4170.jpg
+   - lightinforest-4242x2948.jpg
+  thumbnail: lightinforest-1224x851.jpg
+-
+ title: Photography
+ directory: photography
+ preview:
+  filename: fern
+  original: fern-6000x3999.jpg
+  sizes:
+   - fern-4242x2827.jpg
+   - fern-2999x1999.jpg
+   - fern-2121x1414.jpg
+  thumbnail: fern-1224x816.jpg

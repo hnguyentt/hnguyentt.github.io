@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<head>
+  {% include mathjax.html %}
+</head>
+<article class="post">
+  <h1>{{ page.title }}</h1>
+
+  <div class="entry">
+    <div class="date">
+      {%- if page.last_modified_on -%}
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Last updated: {{ page.last_modified_on | date: "%B %e, %Y" }}
+      {%- else -%}
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Last updated: {{ page.date | date: "%B %e, %Y" }}
+      {%- endif -%}
+    </div>
+    <span class="post-tags"><i class="fa fa-tags" aria-hidden="true"></i><b> Tags:</b>
+      [&nbsp;
+      {% for tag in page.tags %}
+        {% capture tag_name %}{{ tag }}{% endcapture %}
+        <a href="/tag/{{ tag_name }}"><code class="highlighter-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+      {% endfor %}
+    ]</span>
+    {{ content }}
+
+  </div>
+
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+
+  {% include disqus.html %}
+</article>
