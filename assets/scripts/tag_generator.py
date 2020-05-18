@@ -7,7 +7,6 @@ Contact: lqian8@jhu.edu
 This script creates tags for your Jekyll blog hosted by Github page.
 No plugins required.
 REFACTOR
-
 '''
 
 import glob

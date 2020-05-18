@@ -1,16 +1,31 @@
+"""
+#!/usr/bin/env python
+Adopted from https://gist.github.com/opieters/756c86fdad219867c0f4
+Editted by Hoa Nguyen
+Last update: May 18, 2020
+"""
 # dependencies
 import yaml, imagesize
 from os import listdir, rename
 from os.path import isfile, join
+import argparse
+
+parser = argparse.ArgumentParser("GALLERY GENERATOR")
+parser.add_argument("-type", help="'drawings' or 'photography'", default="drawings")
+args = parser.parse_args()
 
 # configuration
-output_file = "drawings.yml"
+if args.type == "drawings":
+    output_file = "_data/drawings.yml"
+    image_path = "drawings"
+else:
+    output_file = "_data/photography.yml"
+    image_path = "photography"
 input_file = output_file
-image_path = "drawings"
 extensions= ['jpg', 'png','jpeg']
 
 # set correct path
-path = join("../../assets/gallery/", image_path)
+path = join("assets/gallery/", image_path)
 
 # extract image files
 print('Collecting files...')

@@ -1,22 +1,32 @@
 # About
 
 This repository is for my personal website.
-The source codes belong to MIT license, excepting the followings written by myself:
 
-(1) `assets/gallery/resize_image.sh`: this script is used to auto resize original image into different sizes. This assists in gallery generation.
-To use the script, classification images into landscape (width >= height) and portrait (width < height) type is required.
+The backbone codes belong to this repo: https://github.com/barryclark/jekyll-now
 
-Run:
+Some of my own modifications:
+
+(1) Add tags<br>
+(2) Add gallery<br>
+(3) Scripts (some were writen by me, some were adopted from the others with some modifications): `assets/scripts`
+
+## Script usages
+Requirements: `./requirements.sh`
+
+### Tag generators
+When new tags are added, run the following script to generate tags:
 ```bash
-./resize_img.sh landscape PATH/TO/FILE/OF/LANDSCAPE/IMAGE/LIST
-./resize_img.sh portrait PATH/TO/FILE/OF/PORTRAIT/IMAGE/LIST
+python ./assets/scripts/tag_generator.py
 ```
 
-In my blog, I focus on these following topics:
+### Gallery
+To create gallery, after adding new image, several sizes of images needed to be created, using this script:
+```bash
+assets/scripts/resize_img.sh <path_to_txt_ls_of_files>
+```
 
-### Mathematics
-
-### Bioinformatics
-
-### Health Informatics
+After that, run:
+```bash
+assets/scripts/gallery_generator.py -type [drawings|photography]
+```
 
