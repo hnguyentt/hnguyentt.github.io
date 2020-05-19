@@ -63,7 +63,7 @@ permalink: /checklist/
 
 <h3>Lectures</h3>
 <input type="checkbox" checked> Descriptive Statistics - <a href="https://github.com/nguyenhoa93/foxience-bootcamp"> Foxience Bootcamp</a><br>
-<input type="checkbox"> Tutorials: Kaggle Kernel, Google Colab<br>
+<input type="checkbox" checked> Tutorials: Kaggle Kernel, Google Colab<br>
 <input type="checkbox"> [VietAI] Assignment 1<br>
 <input type="checkbox"> [VietAI] Assignment 3<br>
 <input type="checkbox"> [VietAI] Assignment 4
