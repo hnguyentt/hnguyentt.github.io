@@ -8,7 +8,10 @@ Some of my own modifications:
 
 (1) Add tags<br>
 (2) Add gallery<br>
-(3) Scripts (some were writen by me, some were adopted from the others with some modifications): `assets/scripts`
+(3) Sort posts based on last-modified date<br>
+(4) Add Reading time for post<br>
+(5) Add scripts (some were writen by me, some were adopted from the others with some modifications): `assets/scripts`<br>
+(6) Add `back-to-top` button for long post or gallery
 
 ## Script usages
 Requirements: `./requirements.sh`
