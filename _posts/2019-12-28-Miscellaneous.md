@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2020-05-13
+last_modified_on: 2020-05-20
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -162,7 +162,7 @@ Yihui Xei also gave his comment about those jokes in a presentation: [link](http
 * space savings in memory.
 2. Install a jupyter kernel inside an virtual environment
 ```bash
-ipython kernel install --user --name=<name of virlenv>
+python -m ipykernel install --user --name <name of virtualenv>
 ```
 
 3. Show description of a function/module, type:

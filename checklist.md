@@ -92,6 +92,7 @@ permalink: /checklist/
 <input type="checkbox"><a href="http://rosalind.info/problems/list-view/"> Rosalind Problem Set</a><br>
 <input type="checkbox"><a href="https://github.com/nguyenhoa93/data-visualization-practice"> Data visualization</a><br>
 <input type="checkbox" checked> Set up dotfiles<br>
+<input type="checkbox"> TCGA project<br>
 
 
 
