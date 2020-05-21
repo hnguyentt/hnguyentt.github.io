@@ -4,6 +4,7 @@ title: Expectation and Variance of Uniform distribution
 mathjax: true
 tags: mathematics
 read_time: true
+last_modified_on: 2020-05-21
 ---
 **Contents:**
 
@@ -29,8 +30,11 @@ read_time: true
 $ \textbf{Notation: }\mathcal{U}\\{a, b\\} \text { or unif}\\{a, b\\} $
 
 **Probability Mass Function (PMF)**:
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/uniform_distribution_discrete.png">
 
+<center><img src="{{ site.url }}{{ site.baseurl }}/assets/images/uniform_distribution_discrete.png"></center>
+<center><i>Image: ikamusumeFan|Wikimedia Commons</i></center>
+
+<br>
 $$ \text { PMF of the discreet uniform distribution: } f(x)=\left\{\begin{array}{ll}{\frac{1}{b-a+1}} & {\text { for } x \in[a, b] \text{, } x \in \mathcal{Z}} \\ {0} & {\text { otherwise }}\end{array}\right. $$
 
 **Examples:**
@@ -43,7 +47,10 @@ The probability such that that student in each group is equal to each other.
 $ \textbf{ Notation } \quad \mathcal{U}(a, b) \text { or unif}(a, b) $
 
 **Probability Density Function (PDF)**:
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/uniform_distribution_continuous.png">
+<center><img src="{{ site.url }}{{ site.baseurl }}/assets/images/uniform_distribution_continuous.png"></center>
+<center><i>Image: ikamusumeFan|Wikimedia Commons</i></center>
+
+<br>
 Continuous Uniform distribution is also called ***rectangular distribution*** because of its shape.
 
 $$ \text {PDF of the uniform distribution: }f(x)=\quad\left\{\begin{array}{ll}{\frac{1}{b-a}} & {\text { for } x \in[a, b]} \\ {0} & {\text { otherwise }}\end{array}\right. $$ 
@@ -91,10 +98,19 @@ This is equivalent to:
 
 $$ \sigma^{2}=\operatorname{Var}(X)=E\left[X^{2}\right]-\mu^{2} $$
 
-**Properties:**
+**Properties:** where $C$, $a$, $b$ are constants
+
+* $\operatorname{Var}(X+C) = \operatorname{Var}(X)$
+* $\operatorname{Var}(CX)=C^{2}.\operatorname{Var}(X)$
+* $\operatorname{Var}(aX + b)=a^{2}.\operatorname{Var}(X)$
+* $\operatorname{Var}(X_{1}+X_{2}+...+X_{n})=\operatorname{Var}(X_{1})+\operatorname{Var}(X_{2})+...+\operatorname{Var}(X_{n})$ if $X_{1}, X_{2},..., X_{n}$ are independent random variables.
 
 ## 2. Expectation of Uniform distribution
-In **Discrete Uniform distribution**:
+**Continuous distribution:**
+$$ E(X)=\int_{-\infty}^{\infty} x P(x)dx=\int_{a}^{b} x \frac{1}{b-a} dx $$
+$$ \iff E(X) = \frac{1}{2(b-a)}*x^{2}\vert_{a}^{b} = \frac{a+b}{2} $$
+
+**Discrete Uniform distribution:**
 
 $$ E[X] = \sum_{a}^{b} xP(x) = \frac{1}{b-a+1}[a+(a+1)+(a+2)+...+b] $$
 
@@ -103,8 +119,21 @@ $$ E[X] = \frac{1}{b-a+1}\frac{(a+b)(b-a+1)}{2} = \frac{a+b}{2} $$
 $ \text{Therefore, in discrete uniform distribution: } E[X] = \frac{a+b}{2} $
 
 ## 3. Variance of Uniform distribution
-In **Discrete Uniform distribution**:
+**Continuous Uniform Distribution:**
 
+$$ \operatorname{Var}(X)=E\left[X^{2}\right]-\mu^{2} =  E[X^{2}] - \frac{(a+b)^{2}}{4} $$
+
+
+Let's calculate $ E[X^{2}] $
+
+$$E[X^{2}] = \int_{a}^{b}\frac{x^{2}}{b-a} dx = \frac{b^{3}-a^{3}}{3(b-a)}=\frac{a^{2}+ab+b^{2}}{3} $$
+
+Hence, 
+
+$$ \operatorname{Var}(X)=\frac{a^{2}+ab+b^{2}}{3} - \frac{(a+b)^{2}}{4} = \frac{(b-a)^{2}}{12}$$
+
+
+**Discrete Uniform distribution:**
 $$ \operatorname{Var}(X)=E\left[X^{2}\right]-\mu^{2} =  E[X^{2}] - \frac{(a+b)^{2}}{4} $$
 
 $ \text{To calculate } \operatorname{Var}(X) \text{, we find } E[X^{2}] $
@@ -128,7 +157,7 @@ $ \text{Substitute these values in (2): } S(n) = \frac{1}{3}n^{3}+\frac{1}{2}n^{
 
 $ \text{Finally, } S(n) = \frac{1}{3}n^{3}+\frac{1}{2}n^{2}+\frac{1}{6}n $
 
-$ \textbf{Now we can calculate } E[X^{2}] $
+$ \text{Now we can calculate } E[X^{2}] $
 
 $ E[X^{2}]=\frac{1}{b-a+1}\\{\frac{1}{3}[b^{3}-(a-1)^{3}]+\frac{1}{2}[b^{2}-(a-1)^{2}]+\frac{1}{6}[b-(a-1)]\\} $
 
@@ -136,10 +165,11 @@ $$ =\frac{1}{3}[b^{2}+b(a-1)+(a-1)^{2}] + +\frac{1}{2}(b+a-1)+\frac{1}{6} $$
 
 $$ =\frac{2b^{2}+2ab-2b+2a^{2}-4a+2+3b+3a-3+1}{6} = \frac{2a^{2}+2b^{2}+2ab-a+b}{6} $$
 
-$ \textbf{And finally, } \operatorname{Var}(X) $
+$ \text{And finally, } \operatorname{Var}(X) $
 
 $$ \operatorname{Var}(X)=  E[X^{2}] - \frac{(a+b)^{2}}{4} =  \frac{2a^{2}+2b^{2}+2ab-a+b}{6} - \frac{(a+b)^{2}}{4}$$
 
 $$ \operatorname{Var}(X)=  \frac{4a^{2}+4b^{2}+4ab-2a+2b-3a^{2}-3b^{2}-6ab}{12} = \frac{(b-a)^{2}+2(b-a)}{12} $$
 
 $$ \operatorname{Var}(X)=  \frac{(b-a)(b-a+2)}{12}$$
+
