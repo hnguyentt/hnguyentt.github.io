@@ -6,9 +6,9 @@ last_modified_on: 2020-06-03
 read_time: true
 ---
 
-After implementing GradCAM with ResNet50 pre-trained on ImageNet for [Dogs vs Cats](https://www.kaggle.com/c/dogs-vs-cats) data on Kaggle, I found something funny things about cats. (just for fun)
+After implementing GradCAM with ResNet50 pre-trained on ImageNet for [Dogs vs Cats](https://www.kaggle.com/c/dogs-vs-cats) data on Kaggle, I found something funny about cats. (just for fun)
 
-See more details of my implementation in this Kaggle Notebook: [link](https://www.kaggle.com/nguyenhoa/dog-cat-classifier-resnet50v2-tf-keras-gradcam?scriptVersionId=35394264) 
+See more details of my implementation in [this Kaggle Notebook](https://www.kaggle.com/nguyenhoa/dog-cat-classifier-resnet50v2-tf-keras-gradcam?scriptVersionId=35394264) 
 
 >What I did:
 >* Took ResNet50 model trained on ImageNet, made prediction with dog and cat images and observed GradCAM
