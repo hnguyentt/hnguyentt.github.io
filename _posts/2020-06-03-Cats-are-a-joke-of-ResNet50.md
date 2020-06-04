@@ -32,7 +32,7 @@ Cats always think that they have a super power to rule the world until one day t
 
 ><i class="fa fa-sticky-note-o" aria-hidden="true"></i> **Note:** I forgot to convert heatmap from `BRG` to `RGB` so the GradCAM should be maximum for cold colors.
 
-But at the end of the day, hoooman broke cats' heart when finally ResNet50 recognized one cat sticker but hooman labelled it as a dog.
+But at the end of the day, hoooman is the species who broke cats' heart when finally ResNet50 recognized one cat sticker but hooman labelled it as a dog.
 
 ![hooman](../assets/images/gradCAM/wrong_label.png)
 
