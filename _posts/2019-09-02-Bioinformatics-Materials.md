@@ -3,7 +3,7 @@ layout: post
 title: Bioinformatics and Health Informatics Materials
 tags: bioinformatics health-informatics
 read_time: true
-last_modified_on: 2020-05-20
+last_modified_on: 2020-06-08
 ---
 
 A collection of labs, MOOCs, Websites on Bioinformatics. This article will be updated regularly.
@@ -18,6 +18,9 @@ My favorite page on:
 
 ### 2. [Rosalind](http://rosalind.info/about/)
  A platform for learning bioinformatics through problem solving.
+ 
+### 3. [OMGenomics](http://omgenomics.com/)
+ A great website by [Maria Nattestad](https://github.com/MariaNattestad), which focus on data visualization for genomics. 
 
 ## Labs
 ### 1. [Imaging and Modeling lab, Instut Pasteur](https://github.com/imodpasteur)

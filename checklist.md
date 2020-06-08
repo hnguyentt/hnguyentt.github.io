@@ -77,6 +77,8 @@ permalink: /checklist/
 <input type="checkbox" checked> Bánh xe số phận, <i>Herman Hess</i> <a href="https://www.goodreads.com/review/show/3193308487?book_show_action=false"> --<i>Rating</i></a><br>
 <input type="checkbox"> The Sympathizer, <i>Viet Thanh Nguyen</i><br>
 <input type="checkbox"> The call of the wild, <i>Jack London</i><br>
+<h4>Literature</h4>
+<input type="checkbox" checked> Trí tuệ của hoa, <i>Intelligence of Flowers</i>, dịch bởi <i>Thi Hoa</i> [--Rating](https://www.goodreads.com/book/show/2418471.The_Intelligence_of_Flowers)
 <h4>Popular Science</h4>
 <input type="checkbox"> The Book of Why, <i>Judea Pearl</i><br>
 <h4>Technicals</h4>
