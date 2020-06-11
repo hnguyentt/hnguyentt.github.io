@@ -86,7 +86,8 @@ A collection of stuffs that I am interested in and something I had to search mor
 1. [Distil](https://distill.pub/about/)
 
     A powerful medium to share new ways of thinking.
-    
+
+2. [Tensorboad from a remote server](http://cerfacs.fr/helios/research_blog/tensorboard/)   
 <hr>
 
 ## Command lines for an easy life
