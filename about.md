@@ -1,19 +1,13 @@
 ---
 layout: page
-title: Hoa Nguyen
+title: Peace
 permalink: /about/
 ---
  >*I love coding and exploring the code of life.*
  
- I am a pharmacist and now working as a research engineer at [Imaging and Modelinng Unit](https://sites.google.com/site/imagingandmodeling/home?authuser=0) at Pasteur Institute, Paris, France. My main focus is deep learning projects for Cardiology.<br>
-
- Prior to that, I was a data analyst for [Artificial Intelligence Application](http://www.a2ds.io/) at [Cao Thang Eye Hospital (CTEH)](http://cteyehospital.com/).
- I focused on the reasoning project in which we built a <b>Knowledge Graph in Ophthalmology</b> and research the approaches to mine the graph.
- Particularly, my method was using <b>representaion learning</b> to find embedding vectors of the nodes, edges, and sub-graph for downstream machine learning tasks.<br><br>
- Apart from my full-time job, I also join [VietAI](http://vietai.org/), a community of Artificial Intelligence in Vietnam, in the position of a teaching assistant.
- I do enjoy teaching as I consider that it is a journey of learning and it always encourages me to understand thoroughly a problem.<br><br>
- In my spare time, I enjoy learning to play piano and [kalimba](https://en.wikipedia.org/wiki/Mbira) despite the fact that I am tone-deaf, and thus play badly. I am also into drawing, especially color painting.
- I just draw for fun so my drawings look so childish.
+ *"Apparently, this user prefers to keep an air of mystery about them."* - StackOverflow
+ 
+ It's not true. Something about me:
  
 <html>
 <head>
