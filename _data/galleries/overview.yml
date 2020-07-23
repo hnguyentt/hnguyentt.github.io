@@ -14,10 +14,11 @@
  title: Photography
  directory: photography
  preview:
-  filename: fern
-  original: fern-6000x3999.jpg
+  filename: langco
+  original: langco-2121x1414.jpg
   sizes:
-   - fern-4242x2827.jpg
-   - fern-2999x1999.jpg
-   - fern-2121x1414.jpg
-  thumbnail: fern-1224x816.jpg
+   - langco-1224x816.jpg
+   - langco-4242x2827.jpg
+   - langco-2999x1999.jpg
+   - langco-6000x3999.jpg
+  thumbnail: langco-1224x816.jpg

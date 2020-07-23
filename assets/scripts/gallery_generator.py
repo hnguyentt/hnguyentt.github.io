@@ -16,10 +16,10 @@ args = parser.parse_args()
 
 # configuration
 if args.type == "drawings":
-    output_file = "_data/drawings.yml"
+    output_file = "_data/galleries/drawings.yml"
     image_path = "drawings"
 else:
-    output_file = "_data/photography.yml"
+    output_file = "_data/galleries/photography.yml"
     image_path = "photography"
 input_file = output_file
 extensions= ['jpg', 'png','jpeg']

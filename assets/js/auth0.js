@@ -1,6 +1,7 @@
 let auth0 = null;
 const fetchAuthConfig = () => fetch("/assets/auth_config.json");
-let base_url = "http://localhost:4000"
+let base_url = "http://localhost:4000";
+
 
 
 const configureClient = async () => {
@@ -43,14 +44,20 @@ window.onload = async () => {
     await auth0.handleRedirectCallback();
     updateUI();
     // Use replaceState to redirect the user away and remove the querystring parameters
-    window.history.replaceState({}, document.title, window.location.pathname.split("?code=")[0]);
+    window.location.replace(window.history.replaceState({}, document.title, window.location.pathname.split("?code=")[0]));
   }
 };
 
 const login = async () => {
-  await auth0.loginWithRedirect({
-    redirect_uri: window.location.href
-  });
+ await auth0.loginWithRedirect({
+   redirect_uri: window.location.href
+ });
+  // const requestOption = {
+  // headers: {
+  //   "Access-Control-Allow-Origin": "*",
+  //   "Access-Control-Allow-Header": "Origin,X-Requested-With,Content-Type,Accept"}
+  // };
+  // let response = fetch("http://localhost:3000/login");
 };
 
 const logout = () => {

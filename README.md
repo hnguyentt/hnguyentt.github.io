@@ -30,6 +30,6 @@ assets/scripts/resize_img.sh <path_to_txt_ls_of_files>
 
 After that, run:
 ```bash
-assets/scripts/gallery_generator.py -type [drawings|photography]
+python assets/scripts/gallery_generator.py -type [drawings|photography]
 ```
 

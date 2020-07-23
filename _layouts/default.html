@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" crossorigin="anonymous">
 
     <!--Login-Logout-->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous">
-    </script>
+    <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>-->
+    <!--<script-->
+      <!--src="https://code.jquery.com/jquery-3.4.1.min.js"-->
+      <!--integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="-->
+      <!--crossorigin="anonymous">-->
+    <!--</script>-->
 
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
     <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" crossorigin="anonymous"></script>
@@ -85,15 +85,16 @@
           </nav>
         </header>
       </div>
-      <div style="text-align:center">
-        <br>
-        <div id="avatar-img-div" class="hidden">
-          <img id="avatar-img" class="ui avatar image" src="">
-          <span id="usr"></span>
-        </div>
-        <button id="btn-login" hidden="true" onclick="login()">Login/Sign up</button>
-        <button id="btn-logout" hidden="true" onclick="logout()">Logout</button>
-      </div>
+      <!--<div style="text-align:center">-->
+        <!--<br>-->
+        <!--<div id="avatar-img-div" class="hidden">-->
+          <!--<img id="avatar-img" class="ui avatar image" src="">-->
+          <!--<span id="usr"></span>-->
+        <!--</div>-->
+        <!--<button id="btn-login" hidden="true" onclick="login()">Login/Sign up</button>-->
+        <!--&lt;!&ndash; <a href="http://localhost:3000/login">Clickhere</a> &ndash;&gt;-->
+        <!--<button id="btn-logout" hidden="true" onclick="logout()">Logout</button>-->
+      <!--</div>-->
 
     </div>
     <div id="main" role="main" class="container">
@@ -127,7 +128,7 @@
   </body>
 </html>
 
-<script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>
-<script src="https://cdn.auth0.com/js/auth0/9.11/auth0.min.js"></script>
-<script src="{{ base.url | prepend: site.url }}/assets/js/auth0.js"></script>
+<!--<script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>-->
+<!--&lt;!&ndash;<script src="https://cdn.auth0.com/js/auth0/9.11/auth0.min.js"></script>&ndash;&gt;-->
+<!--<script src="{{ base.url | prepend: site.url }}/assets/js/auth0.js"></script>-->
 

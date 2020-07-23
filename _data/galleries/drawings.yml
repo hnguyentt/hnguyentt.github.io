@@ -97,8 +97,16 @@ pictures:
 - filename: autumn
   original: autumn-6000x4249.jpg
   sizes:
-  - autumn-4242x3004.jpg
   - autumn-1224x867.jpg
-  - autumn-2121x1502.jpg
   - autumn-2999x2124.jpg
-  thumbnail: autumn-2999x2124.jpg
+  - autumn-2121x1502.jpg
+  - autumn-6000x4249.jpg
+  thumbnail: autumn-1224x867.jpg
+- filename: lavender
+  original: lavender-2999x2249.jpg
+  sizes:
+  - lavender-1224x918.jpg
+  - lavender-2121x1591.jpg
+  - lavender-4242x3182.jpg
+  - lavender-6000x4500.jpg
+  thumbnail: lavender-1224x918.jpg
