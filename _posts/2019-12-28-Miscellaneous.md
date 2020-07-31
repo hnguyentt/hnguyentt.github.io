@@ -118,6 +118,10 @@ To unmount with `umount`, we need super user permission.
 As a normal user, you can use `fusermount`:
 `fusermount -u mountpoint`
 
+6. Convert `.mov`|`.MP4` to `.gif`
+* Convert: https://gist.github.com/SheldonWangRJT/8d3f44a35c8d1386a396b9b49b43c385
+* Endless replay: https://superuser.com/a/1017674/1186435
+
 <hr>
 
 ## Visualization
