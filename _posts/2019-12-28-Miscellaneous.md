@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2020-05-20
+last_modified_on: 2020-09-18
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -127,8 +127,10 @@ As a normal user, you can use `fusermount`:
 ## Visualization
 1. [Graph gallery](https://www.r-graph-gallery.com/)
 This page is a collection of beautiful charts with the R programming language. It also supplies many materials for visualizsation task.
+2. Animations in Jupyter Notebook: http://louistiao.me/posts/notebooks/embedding-matplotlib-animations-in-jupyter-as-interactive-javascript-widgets/
 
 <hr>
+
 ## Jokes
 1. [Statistics Jokes](http://my.ilstu.edu/~gcramsey/Gallery.html?fbclid=IwAR2rM-nbwJYeQIIJSQBMzMNh9jJm-WUUw_jdhQuRAS66kHIwleiEnA-igPU): A gallery of statistics jokes by Dr. Ramseyer
 Yihui Xei also gave his comment about those jokes in a presentation: [link](https://yihui.org/en/2007/10/jokes-in-statistics-a-talk-to-be-given-in-cueb/)
