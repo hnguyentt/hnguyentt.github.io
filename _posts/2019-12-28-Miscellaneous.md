@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2020-09-18
+last_modified_on: 2020-09-21
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -17,12 +17,12 @@ A collection of stuffs that I am interested in and something I had to search mor
 - [Jokes](#jokes)
 - [Data Science Workflow](#data-science-workflow)
 - [Cheat sheet](#cheat-sheet)
-	- [Vim](#vim)
-	- [Tmux](#tmux)
-	- [Conda virtual environment](#conda-virtual-environment)
+  - [Vim](#vim)
+  - [Tmux](#tmux)
+  - [Conda virtual environment](#conda-virtual-environment)
 - [Python tips](#python-tips)
 - [Templates](#templates)
-	- [1. Presentations](#1-presentations)
+  - [1. Presentations](#1-presentations)
 
 <!-- /MarkdownTOC -->
 
@@ -121,6 +121,19 @@ As a normal user, you can use `fusermount`:
 6. Convert `.mov`|`.MP4` to `.gif`
 * Convert: https://gist.github.com/SheldonWangRJT/8d3f44a35c8d1386a396b9b49b43c385
 * Endless replay: https://superuser.com/a/1017674/1186435
+
+7. Check if port is in use: [link](https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/)
+```bash
+#List all processes listening from all ports
+lsof -i -P -n | grep LISTEN 
+netstat -tulpn | grep LISTEN
+# List processes listeing to specific ports
+lsof -i:<port>
+```
+* Kill process listeing from port:
+```bash
+lsof -ti:<port> | xargs kill -9
+```
 
 <hr>
 
