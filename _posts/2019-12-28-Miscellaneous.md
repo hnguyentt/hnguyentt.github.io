@@ -135,6 +135,11 @@ lsof -i:<port>
 lsof -ti:<port> | xargs kill -9
 ```
 
+8. Check PID of process
+```bash
+ps ax | grep <something>
+```
+
 <hr>
 
 ## Visualization
