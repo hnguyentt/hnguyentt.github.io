@@ -13,6 +13,7 @@ A collection of stuffs that I am interested in and something I had to search mor
 - [Tips for professionalism](#tips-for-professionalism)
 - [Websites for Machine Learning](#websites-for-machine-learning)
 - [Command lines for an easy life](#command-lines-for-an-easy-life)
+- [Latex](#latex)
 - [Visualization](#visualization)
 - [Jokes](#jokes)
 - [Data Science Workflow](#data-science-workflow)
@@ -141,6 +142,9 @@ ps ax | grep <something>
 ```
 
 <hr>
+
+## Latex
+1. Getting to know about directory structure of Latex: https://tex.stackexchange.com/a/184430/220467
 
 ## Visualization
 1. [Graph gallery](https://www.r-graph-gallery.com/)
