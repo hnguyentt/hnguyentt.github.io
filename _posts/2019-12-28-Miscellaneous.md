@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2020-09-21
+last_modified_on: 2020-10-05
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -21,6 +21,7 @@ A collection of stuffs that I am interested in and something I had to search mor
   - [Tmux](#tmux)
   - [Conda virtual environment](#conda-virtual-environment)
 - [Python tips](#python-tips)
+- [R tips](#r-tips)
 - [Templates](#templates)
   - [1. Presentations](#1-presentations)
 
@@ -197,6 +198,11 @@ help(<name of function/module>)
 
 <hr>
 
+## R tips
+* Install Jupyter Notebook support for R
+```bash
+conda install -c r r-essentials
+```
 ## Templates
 ### 1. Presentations
 * [You Exec](https://youexec.com/keynote-presentation-free-sjwhsk)
