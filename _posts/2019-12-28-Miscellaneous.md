@@ -123,6 +123,7 @@ As a normal user, you can use `fusermount`:
 6. Convert `.mov`|`.MP4` to `.gif`
 * Convert: https://gist.github.com/SheldonWangRJT/8d3f44a35c8d1386a396b9b49b43c385
 * Endless replay: https://superuser.com/a/1017674/1186435
+* Optimizing memory: `gifsicle -O3 animation.gif -o animation-optimized.gif` ([link](https://davidwalsh.name/optimize-gifs))
 
 7. Check if port is in use: [link](https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/)
 ```bash
