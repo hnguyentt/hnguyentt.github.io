@@ -208,6 +208,9 @@ help(<name of function/module>)
 ```bash
 conda install -c r r-essentials
 ```
+* Update R & transfer old installed packages to new version
+https://stackoverflow.com/a/17625368/11524628
+
 ## Templates
 ### 1. Presentations
 * [You Exec](https://youexec.com/keynote-presentation-free-sjwhsk)
