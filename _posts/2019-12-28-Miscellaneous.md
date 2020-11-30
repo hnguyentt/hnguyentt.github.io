@@ -121,7 +121,7 @@ As a normal user, you can use `fusermount`:
 `fusermount -u mountpoint`
 
 6. Convert `.mov`|`.MP4` to `.gif`
-* Convert: https://gist.github.com/SheldonWangRJT/8d3f44a35c8d1386a396b9b49b43c385
+* Convert & Optimize: https://gist.github.com/dergachev/4627207
 * Endless replay: https://superuser.com/a/1017674/1186435
 * Optimizing memory: `gifsicle -O3 animation.gif -o animation-optimized.gif` ([link](https://davidwalsh.name/optimize-gifs))
 
