@@ -33,3 +33,6 @@ After that, run:
 python assets/scripts/gallery_generator.py -type [drawings|photography]
 ```
 
+### Run blog locally
+`jekyll s`
+
