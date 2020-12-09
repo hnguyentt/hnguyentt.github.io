@@ -143,6 +143,16 @@ lsof -ti:<port> | xargs kill -9
 ps ax | grep <something>
 ```
 
+9. Rename multiple files
+[https://www.cyberciti.biz/tips/renaming-multiple-files-at-a-shell-prompt.html](https://www.cyberciti.biz/tips/renaming-multiple-files-at-a-shell-prompt.html)
+
+POISIX for shell loop:
+```
+for i in *.bak; do mv -v -- "$i" "${i%.bak}.txt"; done
+```
+
+The above command will change the extension of all `bak` files to `txt` files.
+
 <hr>
 
 ## Latex
