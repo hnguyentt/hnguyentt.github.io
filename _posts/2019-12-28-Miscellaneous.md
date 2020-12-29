@@ -161,7 +161,8 @@ The above command will change the extension of all `bak` files to `txt` files.
 ## Visualization
 1. [Graph gallery](https://www.r-graph-gallery.com/)
 This page is a collection of beautiful charts with the R programming language. It also supplies many materials for visualizsation task.
-2. Animations in Jupyter Notebook: http://louistiao.me/posts/notebooks/embedding-matplotlib-animations-in-jupyter-as-interactive-javascript-widgets/
+2. Animations in Jupyter Notebook: [http://louistiao.me/posts/notebooks/embedding-matplotlib-animations-in-jupyter-as-interactive-javascript-widgets/](http://louistiao.me/posts/notebooks/embedding-matplotlib-animations-in-jupyter-as-interactive-javascript-widgets/)
+3. Save Matplotlib Animations as GIFs: [http://louistiao.me/posts/notebooks/save-matplotlib-animations-as-gifs/](http://louistiao.me/posts/notebooks/save-matplotlib-animations-as-gifs/)
 
 <hr>
 

@@ -65,8 +65,8 @@ permalink: /checklist/
 <input type="checkbox" checked> Descriptive Statistics - <a href="https://github.com/nguyenhoa93/foxience-bootcamp"> Foxience Bootcamp</a><br>
 <input type="checkbox" checked> Tutorials: Kaggle Kernel, Google Colab<br>
 <input type="checkbox" checked> [VietAI] Assignment 1<br>
-<input type="checkbox"> [VietAI] Assignment 3<br>
-<input type="checkbox"> [VietAI] Assignment 4
+<input type="checkbox" checked> [VietAI] Assignment 3<br>
+<input type="checkbox" checked> [VietAI] Assignment 4
 
 <h3>Books</h3>
 <h4>Fictions</h4>
@@ -76,9 +76,13 @@ permalink: /checklist/
 <h4>Novels</h4>
 <input type="checkbox" checked> Bánh xe số phận, <i>Herman Hess</i> <a href="https://www.goodreads.com/review/show/3193308487?book_show_action=false"> --<i>Rating</i></a><br>
 <input type="checkbox"> The Sympathizer, <i>Viet Thanh Nguyen</i><br>
-<input type="checkbox"> The call of the wild, <i>Jack London</i><br>
+<input type="checkbox" checked> The call of the wild, <i>Jack London</i><br>
 <h4>Literature</h4>
 <input type="checkbox" checked> Trí tuệ của hoa, <i>Intelligence of Flowers</i>, dịch bởi <i>Thi Hoa</i> [--Rating](https://www.goodreads.com/book/show/2418471.The_Intelligence_of_Flowers)
+
+<h4>Stories</h4>
+<input type="checkbox"> A moveable feast, <i>Ernest Heimingway</i><br>
+
 <h4>Popular Science</h4>
 <input type="checkbox"> The Book of Why, <i>Judea Pearl</i><br>
 <h4>Technicals</h4>
@@ -95,6 +99,8 @@ permalink: /checklist/
 <input type="checkbox"><a href="https://github.com/nguyenhoa93/data-visualization-practice"> Data visualization</a><br>
 <input type="checkbox" checked> Set up dotfiles<br>
 <input type="checkbox"> TCGA project<br>
+<input type="checkbox" checked><a href="https://github.com/nguyenhoa93/cnn-visualization-keras-tf2"> CNN visualization</a><br>
+
 
 
 
