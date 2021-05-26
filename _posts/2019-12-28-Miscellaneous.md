@@ -118,7 +118,11 @@ sshfs <usrnam>@<hostname>:<path/to/folder> <path to new_folder>
 ```
 To unmount with `umount`, we need super user permission.
 As a normal user, you can use `fusermount`:
-`fusermount -u mountpoint`
+`fusermount -u <mountpoint>`
+
+**Issues:**
+* [sshfs device is busy](https://superuser.com/questions/207269/sshfs-device-is-busy):
+  `fusermount -zu <mountpoint>`
 
 6. Convert `.mov`|`.MP4` to `.gif`
 * Convert & Optimize: https://gist.github.com/dergachev/4627207
