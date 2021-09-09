@@ -6,7 +6,7 @@ read_time: true
 last_modified_on: 2021-09-09
 ---
 
-Virtual machine has a limited partitions for `/`, `/root`, and `/tmp`. When building Singularity images, this error can occur:
+Virtual machine has a limited partition for `/`, `/root`, and `/tmp`. When building Singularity images, this error can occur:
 `No space left on device`
 
 There are two proposed ways to fix the problem:
