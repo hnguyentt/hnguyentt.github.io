@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2020-10-05
+last_modified_on: 2021-09-10
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -156,6 +156,25 @@ for i in *.bak; do mv -v -- "$i" "${i%.bak}.txt"; done
 ```
 
 The above command will change the extension of all `bak` files to `txt` files.
+
+10. Replace string
+Pattern: `${parameter/pattern/string}`
+Example:
+```bash
+mkdir test
+for i in {0..5}; do touch test/test_file"$i".txt; done && ls test
+# output
+# test_file0.txt  test_file1.txt test_file2.txt  test_file3.txt  test_file4.txt
+
+# replace
+for i in $(ls test); do echo ${i/.txt/_replaced.txt}; done
+# output:
+# test_file0_replaced.txt
+# test_file1_replaced.txt
+# test_file2_replaced.txt
+# test_file3_replaced.txt
+# test_file4_replaced.txt
+```
 
 <hr>
 
