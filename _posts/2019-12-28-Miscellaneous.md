@@ -158,22 +158,14 @@ for i in *.bak; do mv -v -- "$i" "${i%.bak}.txt"; done
 The above command will change the extension of all `bak` files to `txt` files.
 
 10. Replace string
+
 Pattern: `${parameter/pattern/string}`
+
 Example:
 ```bash
 mkdir test
 for i in {0..5}; do touch test/test_file"$i".txt; done && ls test
-> output
-> test_file0.txt  test_file1.txt test_file2.txt  test_file3.txt  test_file4.txt
-
-# replace
-for i in $(ls test); do echo ${i/.txt/_replaced.txt}; done
-> output:
-> test_file0_replaced.txt
-> test_file1_replaced.txt
-> test_file2_replaced.txt
-> test_file3_replaced.txt
-> test_file4_replaced.txt
+for i in $(ls test); do echo ${i/.txt/_replaced.txt}; done # replace .txt by _replaced.txt
 ```
 
 <hr>
