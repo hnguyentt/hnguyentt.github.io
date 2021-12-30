@@ -2,14 +2,15 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2021-09-10
+last_modified_on: 2021-12-30
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
 
 <!-- MarkdownTOC autolink="true" -->
 
-- [Virtual Machines:](#virtual-machines)
+- [MacOS tips](#macos-tips)
+- [Virtual Machines](#virtual-machines)
 - [Tips for professionalism](#tips-for-professionalism)
 - [Websites for Machine Learning](#websites-for-machine-learning)
 - [Command lines for an easy life](#command-lines-for-an-easy-life)
@@ -28,8 +29,12 @@ A collection of stuffs that I am interested in and something I had to search mor
 
 <!-- /MarkdownTOC -->
 
+## MacOS tips
+* After updating MacOS, we may need to update the system to make sure the [latest version of Xcode is installed](https://stackoverflow.com/questions/52522565/git-is-not-working-after-macos-update-xcrun-error-invalid-active-developer-pa): `xcode-select --install`
 
-## Virtual Machines:
+<hr color="#0F24F3">
+
+## Virtual Machines
 "Virtual machines are software computers that provide the same functionality as physical computers. Key files that make up a virtual machine include a log file, NVRAM setting file, virtual disk file, and configuration file."
 1. [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox)
 2. [VmWare](https://www.vmware.com/asean.html)
@@ -111,18 +116,19 @@ Example: To remove .DS_Store (a file that stores custom attributes of its contai
 
 5. Mount/Unmount:
 To mount:
-```bash
-# at your local machine
-mkdir <new_folder>
-sshfs <usrnam>@<hostname>:<path/to/folder> <path to new_folder>
-```
-To unmount with `umount`, we need super user permission.
-As a normal user, you can use `fusermount`:
-`fusermount -u <mountpoint>`
+    ```bash
+    # at your local machine
+    mkdir <new_folder>
+    sshfs <usrnam>@<hostname>:<path/to/folder> <path to new_folder>
+    ```
+    To unmount with `umount`, we need super user permission.
+    As a normal user, you can use `fusermount`:
+    `fusermount -u <mountpoint>`
 
-**Issues:**
-* [sshfs device is busy](https://superuser.com/questions/207269/sshfs-device-is-busy):
-  `fusermount -zu <mountpoint>`
+    **Issues:**
+      * [sshfs device is busy](https://superuser.com/questions/207269/sshfs-device-is-busy):
+      `fusermount -zu <mountpoint>`
+
 
 6. Convert `.mov`|`.MP4` to `.gif`
 * Convert & Optimize: https://gist.github.com/dergachev/4627207
@@ -150,22 +156,26 @@ ps ax | grep <something>
 9. Rename multiple files
 [https://www.cyberciti.biz/tips/renaming-multiple-files-at-a-shell-prompt.html](https://www.cyberciti.biz/tips/renaming-multiple-files-at-a-shell-prompt.html)
 
-POISIX for shell loop:
-```
-for i in *.bak; do mv -v -- "$i" "${i%.bak}.txt"; done
-```
-
-The above command will change the extension of all `bak` files to `txt` files.
+    POISIX for shell loop:
+    ```
+    for i in *.bak; do mv -v -- "$i" "${i%.bak}.txt"; done
+    ```
+    The above command will change the extension of all `bak` files to `txt` files.
 
 10. Replace string
 
-Pattern: `${parameter/pattern/string}`
+    Pattern: `${parameter/pattern/string}`
 
-Example:
+    Example:
+    ```bash
+    mkdir test
+    for i in {0..5}; do touch test/test_file"$i".txt; done && ls test
+    for i in $(ls test); do echo ${i/.txt/_replaced.txt}; done # replace .txt by _replaced.txt
+    ```
+
+11. Optimize the size of pdf files
 ```bash
-mkdir test
-for i in {0..5}; do touch test/test_file"$i".txt; done && ls test
-for i in $(ls test); do echo ${i/.txt/_replaced.txt}; done # replace .txt by _replaced.txt
+gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/screen -dCompatibilityLevel=1.4 -sOutputFile=<NameOfOutputFile> <PATH/TO/INPUT>
 ```
 
 <hr>
