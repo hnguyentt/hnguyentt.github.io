@@ -110,3 +110,11 @@ pictures:
   - lavender-4242x3182.jpg
   - lavender-6000x4500.jpg
   thumbnail: lavender-1224x918.jpg
+- filename: mom-in-singapore
+  original: mom-in-singapore-2999x2249.jpeg
+  sizes:
+  - mom-in-singapore-1224x918.jpeg
+  - mom-in-singapore-4242x3181.jpeg
+  - mom-in-singapore-2121x1591.jpeg
+  - mom-in-singapore-6000x4500.jpeg
+  thumbnail: mom-in-singapore-1224x918.jpeg

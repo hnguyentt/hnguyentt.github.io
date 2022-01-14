@@ -85,7 +85,7 @@ for image_set in new_gallery:
 # try to load YAML data
 print('Checking existing YAML data...')
 if isfile(input_file):
-    input_gallery = yaml.load(open(input_file, 'r'))
+    input_gallery = yaml.safe_load(open(input_file, 'r'))
 else:
     # create empty dummy file
     input_gallery = {"pictures": []}
