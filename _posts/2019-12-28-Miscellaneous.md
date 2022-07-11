@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2021-12-30
+last_modified_on: 2022-07-11
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -66,7 +66,7 @@ A collection of stuffs that I am interested in and something I had to search mor
     * Update TOC: Open `Command Palette` and choose `Update TOC`
 <br><br>
 10. Github Protips:
-
+* [A Step by Step Guide to Making Your First GitHub Contribution](https://codeburst.io/a-step-by-step-guide-to-making-your-first-github-contribution-5302260a2940)
 * [From Lee Reilly](https://github.blog/2020-04-09-github-protips-tips-tricks-hacks-and-secrets-from-lee-reilly/)
     * Fuzzy file finder
     * Octotree (Enterprise): Browse files and directories with ease
