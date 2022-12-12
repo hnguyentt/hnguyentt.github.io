@@ -1,0 +1,10 @@
+picture_path: folds
+pictures:
+- filename: folding
+  original: folding-4242x3182.JPG
+  sizes:
+  - folding-1224x918.JPG
+  - folding-2999x2250.JPG
+  - folding-6000x4501.JPG
+  - folding-2121x1591.JPG
+  thumbnail: folding-1224x918.JPG

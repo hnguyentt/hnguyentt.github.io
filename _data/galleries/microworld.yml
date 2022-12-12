@@ -1,0 +1,18 @@
+picture_path: microworld
+pictures:
+- filename: housefly-mouth
+  original: housefly-mouth-6000x5934.JPG
+  sizes:
+  - housefly-mouth-1224x1211.JPG
+  - housefly-mouth-2121x2098.JPG
+  - housefly-mouth-4242x4195.JPG
+  - housefly-mouth-2999x2966.JPG
+  thumbnail: housefly-mouth-2999x2966.JPG
+- filename: pollen-carrying-bee-leg
+  original: pollen-carrying-bee-leg-4000x4083.JPG
+  sizes:
+  - pollen-carrying-bee-leg-1999x2041.JPG
+  - pollen-carrying-bee-leg-816x833.JPG
+  - pollen-carrying-bee-leg-1414x1443.JPG
+  - pollen-carrying-bee-leg-2828x2887.JPG
+  thumbnail: pollen-carrying-bee-leg-1414x1443.JPG

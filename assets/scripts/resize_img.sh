@@ -19,8 +19,10 @@ do
 	ext="${filename##*.}"
 	filename="${filename%.*}"
 
-	h=$(magick identify -format "%h" $line)
-	w=$(magick identify -format "%w" $line)
+	# h=$(magick identify -format "%h" $line)
+	# w=$(magick identify -format "%w" $line)
+    h=$(identify -format "%h" $line)
+	w=$(identify -format "%w" $line)
 	delta=$(expr $w - $h)
 
 	if [[ $delta -lt 0 ]]; then
@@ -30,6 +32,11 @@ do
         convert $line -resize 1414 $dir"/"$filename"-3."$ext
         convert $line -resize 1999 $dir"/"$filename"-4."$ext
         convert $line -resize 816 $dir"/"$filename"-5."$ext
+        # convert $line -thumbnail 4000 $dir"/"$filename"-1."$ext
+        # convert $line -thumbnail 2828 $dir"/"$filename"-2."$ext
+        # convert $line -thumbnail 1414 $dir"/"$filename"-3."$ext
+        # convert $line -thumbnail 1999 $dir"/"$filename"-4."$ext
+        # convert $line -thumbnail 816 $dir"/"$filename"-5."$ext
     else
         echo "Resize "$line" in landscape mode"
         convert $line -resize 6000 $dir"/"$filename"-1."$ext
@@ -37,6 +44,11 @@ do
         convert $line -resize 2999 $dir"/"$filename"-3."$ext
         convert $line -resize 4242 $dir"/"$filename"-4."$ext
         convert $line -resize 1224 $dir"/"$filename"-5."$ext
+        # convert $line -thumbnail 6000 $dir"/"$filename"-1."$ext
+        # convert $line -thumbnail 2121 $dir"/"$filename"-2."$ext
+        # convert $line -thumbnail 2999 $dir"/"$filename"-3."$ext
+        # convert $line -thumbnail 4242 $dir"/"$filename"-4."$ext
+        # convert $line -thumbnail 1224 $dir"/"$filename"-5."$ext
     fi
 
 	rm $line

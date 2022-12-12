@@ -11,18 +11,26 @@ from os.path import isfile, join
 import argparse
 
 parser = argparse.ArgumentParser("GALLERY GENERATOR")
-parser.add_argument("-type", help="'drawings' or 'photography'", default="drawings")
+parser.add_argument("-type", help="type of gallery", default="drawings",
+                    choices=['drawings', 'photography', 'microworld', 'fold'])
 args = parser.parse_args()
 
 # configuration
 if args.type == "drawings":
     output_file = "_data/galleries/drawings.yml"
     image_path = "drawings"
-else:
+elif args.type == "photography":
     output_file = "_data/galleries/photography.yml"
     image_path = "photography"
+elif args.type == "microworld":
+    output_file = "_data/galleries/microworld.yml"
+    image_path = "microworld"
+else:
+    output_file = "_data/galleries/folds.yml"
+    image_path = "folds"
+    
 input_file = output_file
-extensions= ['jpg', 'png','jpeg']
+extensions= ['jpg', 'png','jpeg', 'JPG']
 
 # set correct path
 path = join("assets/gallery/", image_path)

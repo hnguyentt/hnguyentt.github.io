@@ -22,3 +22,27 @@
    - langco-2999x1999.jpg
    - langco-6000x3999.jpg
   thumbnail: langco-1224x816.jpg
+-
+ title: Microworld
+ directory: microworld
+ preview:
+  filename: housefly-mouth
+  original: housefly-mouth-1224x1211.JPG
+  sizes:
+   - housefly-mouth-2121x2098.JPG
+   - housefly-mouth-2999x2966.JPG
+   - housefly-mouth-4242x4195.JPG
+   - housefly-mouth-6000x5934.JPG
+  thumbnail: housefly-mouth-1224x1211.JPG
+-
+ title: Folds
+ directory: folds
+ preview:
+  filename: folding
+  original: folding-1224x918.JPG
+  sizes:
+   - folding-2121x1591.JPG
+   - folding-2999x2250.JPG
+   - folding-4242x3182.JPG
+   - folding-6000x5934.JPG
+  thumbnail: folding-1224x918.JPG
