@@ -1,10 +1,16 @@
 ---
 layout: page
-title: Hoa Nguyen
+title: About Hoa
 permalink: /about/
 ---
  >*I am passionate about coding and delving into the code that drives the essence of life.*
  
+Hello, I'm Hoa Nguyen (Nguyễn Thị Thanh Hòa). I am a pharmacist with a passion for maths and biology. My graduate thesis focused on screening small molecules to inhibit protein-protein interactions by using [pharmacophore](https://www.wikiwand.com/en/Pharmacophore), [docking](https://www.wikiwand.com/en/Docking_(molecular)), and [molecular dynamics](https://www.wikiwand.com/en/Molecular_dynamics). The literature review process for my thesis illuminated the limitless potential of Machine Learning in drug discovery, inspiring me to pursue a career in this fascinating field.
+
+In my leisure time, I find joy in contributing to open-source projects, indulging in a good read, drawing, and experimenting in the kitchen with delicious recipes.
+
+
+With a thirst for knowledge and a desire to ameliorate my writing skills, I have embarked on a journey to document my learning experiences on this page. If you happen to stumble upon my blogs, I hope you find something of value or at least an enjoyable read.
 
  
 <!-- <html>
