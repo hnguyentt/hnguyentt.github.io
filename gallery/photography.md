@@ -5,7 +5,7 @@ no_menu_item: true # required only for this example website because of menu cons
 support: [jquery, gallery]
 ---
 
-Photography is a mean to capture precious moments in my life and the things that I love. I have a huge love for animals and the nature, hence, almost all of my photos belong to these topics.
+Photography is a means for me to preserve the valuable moments in my life and the things that I hold dear. I have an immense love for animals and the great outdoors, thus, the majority of my photos showcase these subjects.
 
 {% include gallery-layout.html gallery=site.data.galleries.photography %}
 

@@ -5,6 +5,6 @@ no_menu_item: true # required only for this example website because of menu cons
 support: [jquery, gallery]
 ---
 
-Surrounding us is a mysterious world of tiny creatures that we hardly observe by normal eyes.
+A mysterious world of tiny creatures surrounds us, yet they often go unnoticed by the naked eyes.
 
 {% include gallery-layout.html gallery=site.data.galleries.microworld %}

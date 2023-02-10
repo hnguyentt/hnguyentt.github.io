@@ -1,21 +1,16 @@
 ---
 layout: page
-title: Peace
+title: Hoa Nguyen
 permalink: /about/
 ---
- >*I love coding and exploring the code of life.*
+ >*I am passionate about coding and delving into the code that drives the essence of life.*
  
- *"Apparently, this user prefers to keep an air of mystery about them."* - StackOverflow
+
  
- It's not true. Something about me:
- 
-<html>
+<!-- <html>
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
-
-<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
-<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
 
 <style type="text/css">
 
@@ -86,4 +81,4 @@ permalink: /about/
 </body>
 </html>
 
-<sup>A simple interactive graph of my resume. <strong>Source code:</strong> [cv_graph](https://github.com/nguyenhoa93/cv_graph)</sup>
+<sup>A simple interactive graph of my resume. <strong>Source code:</strong> [cv_graph](https://github.com/nguyenhoa93/cv_graph)</sup> -->
