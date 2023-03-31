@@ -9,7 +9,7 @@ name: Hoa Nguyen
 description: En tant que chat, je suis partout chez moi !
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/nguyenhoa93/nguyenhoa93.github.io/master/images/Muop.jpeg
+avatar: https://raw.githubusercontent.com/hnguyentt/hnguyentt.github.io/master/images/Muop.jpeg
 
 #
 # Flags below are optional
@@ -21,12 +21,12 @@ footer-links:
   email: hoantt.d2011@uphcm.com.vn
   facebook:
   flickr:
-  github: nguyenhoa93
+  github: hnguyentt
   instagram:
-  linkedin: hoa-nguyen-95a127104
+  linkedin: hnguyentt
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: BluePeace93
+  twitter: hnguyentt
   stackoverflow: "users/11524628/hoa-nguyen"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -41,7 +41,7 @@ google_analytics: UA-163167506-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://nguyenhoa93.github.io
+url: https://hnguyentt.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)

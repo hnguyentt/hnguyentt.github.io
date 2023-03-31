@@ -28,7 +28,7 @@ const updateUI = async () => {
     const pictureUrl = claims.picture
     const usrname = claims.name
 
-    document.getElementById("avatar-img").src = pictureUrl || 'https://raw.githubusercontent.com/nguyenhoa93/dataisbeautiful/master/images/logo.png';
+    document.getElementById("avatar-img").src = pictureUrl || 'https://raw.githubusercontent.com/hnguyentt/dataisbeautiful/master/images/logo.png';
     document.getElementById("usr").append(usrname);
     document.getElementById("avatar-img-div").classList.remove("hidden")
 

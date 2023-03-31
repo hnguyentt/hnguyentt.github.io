@@ -5,9 +5,9 @@ permalink: /projects/
 ---
 
 ### 1. Data Is Beautiful
-- Site: [https://nguyenhoa93.github.io/dataisbeautiful/](https://nguyenhoa93.github.io/dataisbeautiful/){:target="_blank"}
-- Github: [https://github.com/nguyenhoa93/dataisbeautiful](https://github.com/nguyenhoa93/dataisbeautiful){:target="_blank"}
+- Site: [https://hnguyentt.github.io/dataisbeautiful/](https://hnguyentt.github.io/dataisbeautiful/){:target="_blank"}
+- Github: [https://github.com/hnguyentt/dataisbeautiful](https://github.com/hnguyentt/dataisbeautiful){:target="_blank"}
 
 ## 2. Biology Is Cool
-- Site: [https://nguyenhoa93.github.io/biologyiscool/](https://nguyenhoa93.github.io/biologyiscool/)
-- Github: [https://github.com/nguyenhoa93/biologyiscool](https://github.com/nguyenhoa93/biologyiscool)
+- Site: [https://hnguyentt.github.io/biologyiscool/](https://hnguyentt.github.io/biologyiscool/)
+- Github: [https://github.com/hnguyentt/biologyiscool](https://github.com/hnguyentt/biologyiscool)
