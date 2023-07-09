@@ -25,7 +25,8 @@ A collection of stuffs that I am interested in and something I had to search mor
 - [Python tips](#python-tips)
 - [R tips](#r-tips)
 - [Templates](#templates)
-  - [1. Presentations](#1-presentations)
+  - [Presentations](#presentations)
+- [Design](#design)
 
 <!-- /MarkdownTOC -->
 
@@ -248,10 +249,11 @@ conda install -c r r-essentials
 https://stackoverflow.com/a/17625368/11524628
 
 ## Templates
-### 1. Presentations
+### Presentations
 * [You Exec](https://youexec.com/keynote-presentation-free-sjwhsk)
 
 
-
+## Design
+* Google Design: [https://design.google](https://design.google/)
 
 
