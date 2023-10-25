@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2022-07-11
+last_modified_on: 2023-10-25
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -237,6 +237,11 @@ python -m ipykernel install --user --name <name of virtualenv>
 ```bash
 help(<name of function/module>)
 ```
+
+4. Quick GPU test for Tensorflow
+   ```bash
+   srun -J "$F" --pty --gres=gpu:1 -c 4 python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+   ```
 
 <hr>
 
