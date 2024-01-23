@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2023-10-25
+last_modified_on: 2024-01-23
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -177,6 +177,12 @@ ps ax | grep <something>
 11. Optimize the size of pdf files
 ```bash
 gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/screen -dCompatibilityLevel=1.4 -sOutputFile=<NameOfOutputFile> <PATH/TO/INPUT>
+```
+
+12. Update VSCode
+```bash
+sudo apt update
+sudo apt install code
 ```
 
 <hr>
