@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2024-01-23
+last_modified_on: 2024-02-09
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -27,6 +27,7 @@ A collection of stuffs that I am interested in and something I had to search mor
 - [Templates](#templates)
   - [Presentations](#presentations)
 - [Design](#design)
+- [Shortcuts](#shortcuts)
 
 <!-- /MarkdownTOC -->
 
@@ -86,6 +87,7 @@ A collection of stuffs that I am interested in and something I had to search mor
     ```
 <br>
 11. Set up dotfiles
+    
     * [Documents](https://dotfiles.github.io/)
     * [Examples](https://github.com/mathiasbynens/dotfiles)
 <hr>
@@ -267,4 +269,7 @@ https://stackoverflow.com/a/17625368/11524628
 ## Design
 * Google Design: [https://design.google](https://design.google/)
 
-
+## Shortcuts
+* Mathpix Snapping Tool:
+  * Ubuntu: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>M</kbd> (ensure Mathpix is active)
+  * MacOS: <kbd>Ctrl</kbd> + <kbd>⌘</kbd> + <kbd>M</kbd>

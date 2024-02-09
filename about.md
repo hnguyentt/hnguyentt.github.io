@@ -7,13 +7,13 @@ permalink: /about/
  
 Hello, I'm Hoa Nguyen (Nguyễn Thị Thanh Hòa). I am a pharmacist with a passion for maths and biology. My graduate thesis focused on screening small molecules to inhibit protein-protein interactions by using [pharmacophore](https://www.wikiwand.com/en/Pharmacophore), [docking](https://www.wikiwand.com/en/Docking_(molecular)), and [molecular dynamics](https://www.wikiwand.com/en/Molecular_dynamics). The literature review process for my thesis illuminated the limitless potential of Machine Learning in drug discovery, inspiring me to pursue a career in this fascinating field.
 
-In my leisure time, I find joy in contributing to open-source projects, indulging in a good read, drawing, and experimenting in the kitchen with delicious recipes.
+In my leisure time, I find joy in contributing to open-source projects, indulging in a [good read](https://www.goodreads.com/user/show/30950636-ho), [drawing](https://hnguyentt.github.io/gallery/drawings.html), and experimenting in the kitchen with delicious recipes.
 
 
 With a thirst for knowledge and a desire to ameliorate my writing skills, I have embarked on a journey to document my learning experiences on this page. If you happen to stumble upon my blogs, I hope you find something of value or at least an enjoyable read.
 
  
-<!-- <html>
+<html>
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
@@ -87,4 +87,4 @@ With a thirst for knowledge and a desire to ameliorate my writing skills, I have
 </body>
 </html>
 
-<sup>A simple interactive graph of my resume. <strong>Source code:</strong> [cv_graph](https://github.com/hnguyentt/cv_graph)</sup> -->
+<sup>A simple interactive graph of my resume. <strong>Source code:</strong> [cv_graph](https://github.com/hnguyentt/cv_graph)</sup>
