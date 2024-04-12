@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2024-02-09
+last_modified_on: 2024-04-12
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -10,6 +10,7 @@ A collection of stuffs that I am interested in and something I had to search mor
 <!-- MarkdownTOC autolink="true" -->
 
 - [MacOS tips](#macos-tips)
+- [GitHub](#github)
 - [Virtual Machines](#virtual-machines)
 - [Tips for professionalism](#tips-for-professionalism)
 - [Websites for Machine Learning](#websites-for-machine-learning)
@@ -35,6 +36,10 @@ A collection of stuffs that I am interested in and something I had to search mor
 * After updating MacOS, we may need to update the system to make sure the [latest version of Xcode is installed](https://stackoverflow.com/questions/52522565/git-is-not-working-after-macos-update-xcrun-error-invalid-active-developer-pa): `xcode-select --install`
 
 <hr color="#0F24F3">
+
+## GitHub
+1. [Removing sensitive data from a repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
+2. [Resetting remote to a certain commit](https://stackoverflow.com/a/5816761/11524628)
 
 ## Virtual Machines
 "Virtual machines are software computers that provide the same functionality as physical computers. Key files that make up a virtual machine include a log file, NVRAM setting file, virtual disk file, and configuration file."
