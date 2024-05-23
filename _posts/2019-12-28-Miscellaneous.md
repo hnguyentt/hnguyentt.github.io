@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2024-04-12
+last_modified_on: 2024-05-23
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -29,6 +29,7 @@ A collection of stuffs that I am interested in and something I had to search mor
   - [Presentations](#presentations)
 - [Design](#design)
 - [Shortcuts](#shortcuts)
+- [Remove Watermark from pdf](#remove-watermark-from-pdf)
 
 <!-- /MarkdownTOC -->
 
@@ -278,3 +279,6 @@ https://stackoverflow.com/a/17625368/11524628
 * Mathpix Snapping Tool:
   * Ubuntu: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>M</kbd> (ensure Mathpix is active)
   * MacOS: <kbd>Ctrl</kbd> + <kbd>⌘</kbd> + <kbd>M</kbd>
+
+## Remove Watermark from pdf
+* [pdf-unstamper](https://github.com/hwding/pdf-unstamper)
