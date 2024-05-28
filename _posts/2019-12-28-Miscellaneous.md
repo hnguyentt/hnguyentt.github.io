@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous
 tags: misc tips
-last_modified_on: 2024-05-23
+last_modified_on: 2024-05-28
 read_time: true
 ---
 A collection of stuffs that I am interested in and something I had to search more than once.
@@ -197,6 +197,7 @@ sudo apt install code
 
 ## Latex
 1. Getting to know about directory structure of Latex: https://tex.stackexchange.com/a/184430/220467
+2. List of LaTeX mathematical symbols: https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
 
 ## Visualization
 1. [Graph gallery](https://www.r-graph-gallery.com/)
