@@ -58,4 +58,6 @@ read_time: true
 Ref: [sotiris.gkouzias's answer on Tensorflow Discuss](https://discuss.tensorflow.org/t/what-versions-of-cuda-and-cudnn-are-required-for-tensorflow-2-16/24711/3?u=hoa_nguyen)
 
 # PyTorch
-Update soon
+For Pytorch, it's much simple to follow the instruction of Pytorch here: https://pytorch.org/get-started/locally/
+
+Test if GPU available: `python -c "import torch; print(torch.cuda.is_available()); print(torch.cuda.device_count()); print(torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'No GPU')"`
