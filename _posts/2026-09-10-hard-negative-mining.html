@@ -1,0 +1,266 @@
+---
+layout: post
+title: "Why hard-negative mining can increase hidden-positive contamination"
+permalink: /hard-negative-mining/
+tags: mathematics
+last_modified_on: 2026-09-10
+excerpt: "Explore how type-based negative sampling can enrich hidden positives in a knowledge graph. Adjust the candidate pools and compare illustrative batches with actual random draws."
+---
+
+<p>In a knowledge graph, an unobserved link is not necessarily false. Some links
+used as training negatives are <strong>hidden positives</strong>: true relationships
+that have not yet been recorded. Type filtering can concentrate these links among
+the plausible candidates used for hard-negative sampling.</p>
+
+<div id="kg-mining">
+  <style>
+    #kg-mining { --navy: #183153; --blue: #2369b0; --green: #32834c; --gray: #b9c2ce; color: var(--navy); margin: 2em 0; font: 15px/1.5 system-ui, sans-serif; }
+    #kg-mining * { box-sizing: border-box; }
+    #kg-mining h2, #kg-mining h3, #kg-mining p { margin: 0 0 .7em; color: inherit; }
+    #kg-mining h2 { font-size: 1.4em; }
+    #kg-mining h3 { font-size: 1.05em; }
+    #kg-mining .kg-controls { padding: 1.1em; border: 1px solid #c9d9e9; border-radius: 12px; background: #f5f9fd; }
+    #kg-mining .kg-sliders { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1em 1.5em; }
+    #kg-mining label { display: block; font-weight: 600; }
+    #kg-mining output { float: right; display: inline; padding: 0; color: inherit; font: inherit; font-variant-numeric: tabular-nums; }
+    #kg-mining input[type=range] { width: 100%; margin: .5em 0 0; accent-color: var(--blue); cursor: pointer; }
+    #kg-mining .kg-hint { display: block; font-size: .8em; color: #526477; }
+    #kg-mining .kg-actions { display: flex; gap: .65em; flex-wrap: wrap; align-items: end; margin-top: 1em; }
+    #kg-mining select, #kg-mining button { font: inherit; padding: .55em .7em; border: 1px solid #a5bdd4; border-radius: 6px; background: white; color: var(--navy); }
+    #kg-mining button { cursor: pointer; }
+    #kg-mining button:first-of-type { background: var(--blue); color: white; }
+    #kg-mining :focus-visible { outline: 3px solid #b26308; outline-offset: 3px; }
+    #kg-mining .kg-panels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1em; margin: 1em 0; }
+    #kg-mining .kg-panel { padding: .9em; border: 1px solid #b5cfe7; border-radius: 12px; min-width: 0; background: #fafcff; }
+    #kg-mining .kg-pool { background: white; border: 1px solid #c9d9e9; border-radius: 8px; padding: .3em; }
+    #kg-mining svg { display: block; width: 100%; height: auto; }
+    #kg-mining .kg-stage-title { font-size: .85em; font-weight: 600; margin-bottom: .35em; }
+    #kg-mining .kg-arrow { text-align: center; color: var(--blue); font-size: .85em; padding: .65em 0; }
+    #kg-mining .kg-metric { padding: .8em; background: #eaf3fc; border-radius: 8px; margin-top: .8em; }
+    #kg-mining .kg-metric strong { font-size: 1.35em; display: block; }
+    #kg-mining .kg-metric p { font-size: .85em; margin: .3em 0 0; }
+    #kg-mining .kg-summary { padding: 1em; background: #eaf3fc; border-radius: 10px; text-align: center; }
+    #kg-mining .kg-summary strong { font-size: 1.15em; }
+    #kg-mining .kg-legend { display: flex; flex-wrap: wrap; gap: .5em 1em; margin: 1em 0; font-size: .8em; }
+    #kg-mining .kg-symbol { display: inline-block; width: 12px; height: 12px; border-radius: 50%; vertical-align: middle; margin-right: .3em; background: var(--gray); }
+    #kg-mining .kg-positive { background: var(--green); border: 2px solid #17472a; }
+    #kg-mining .kg-hard { background: white; border: 2px solid var(--blue); }
+    #kg-mining .kg-note { font-size: .85em; margin-top: .7em; }
+    @media (max-width: 560px) {
+      #kg-mining .kg-panels, #kg-mining .kg-sliders { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <h2>Explore hidden positives in negative sampling</h2>
+  <p>Each dot is a candidate <strong>link</strong>, not a graph node. In this
+  constructed example, all hidden positives belong to the type-compatible hard pool.</p>
+
+  <div class="kg-controls">
+    <div class="kg-sliders">
+      <div><label for="kg-Ng">Full pool · Ng <output for="kg-Ng" id="kg-Ng-value">100</output></label>
+        <input id="kg-Ng" type="range" min="10" max="500" value="100" step="1" aria-describedby="kg-Ng-hint">
+        <span class="kg-hint" id="kg-Ng-hint">10–500 candidate links</span></div>
+      <div><label for="kg-Nh">Hard pool · Nh <output for="kg-Nh" id="kg-Nh-value">50</output></label>
+        <input id="kg-Nh" type="range" min="1" max="100" value="50" step="1" aria-describedby="kg-Nh-hint">
+        <span class="kg-hint" id="kg-Nh-hint">1–100 links; a subset of Ng</span></div>
+      <div><label for="kg-Pu">Hidden positives · Pu <output for="kg-Pu" id="kg-Pu-value">10</output></label>
+        <input id="kg-Pu" type="range" min="0" max="50" value="10" step="1" aria-describedby="kg-Pu-hint">
+        <span class="kg-hint" id="kg-Pu-hint">0–50 links; all inside Nh</span></div>
+      <div><label for="kg-k">Batch size · k <output for="kg-k" id="kg-k-value">10</output></label>
+        <input id="kg-k" type="range" min="1" max="50" value="10" step="1" aria-describedby="kg-k-hint">
+        <span class="kg-hint" id="kg-k-hint">1–50 links per batch</span></div>
+    </div>
+    <div class="kg-actions">
+      <div><label for="kg-mode">Batch mode</label>
+        <select id="kg-mode"><option value="illustrative">Illustrative batches</option>
+          <option value="random">Actual random draws</option></select></div>
+      <button id="kg-resample" type="button">Rearrange example</button>
+      <button id="kg-reset" type="button">Reset defaults</button>
+    </div>
+    <p class="kg-note">Reducing a pool also reduces any dependent values that exceed its size.</p>
+  </div>
+
+  <div class="kg-legend">
+    <span><i class="kg-symbol kg-positive"></i>Hidden positive (dark center)</span>
+    <span><i class="kg-symbol"></i>True negative</span>
+    <span><i class="kg-symbol kg-hard"></i>Blue ring: member of the hard pool</span>
+  </div>
+
+  <div class="kg-panels">
+    <section class="kg-panel" aria-labelledby="kg-random-title">
+      <h3 id="kg-random-title">A · Random sampling</h3>
+      <div class="kg-stage-title" id="kg-full-title"></div>
+      <div class="kg-pool"><svg id="kg-full" role="img" aria-label="Full candidate pool"></svg></div>
+      <div class="kg-arrow">↓ Uniform sampling from the full pool</div>
+      <div class="kg-stage-title" id="kg-random-batch-title"></div>
+      <div class="kg-pool"><svg id="kg-random-batch" role="img" aria-label="Random sampling batch"></svg></div>
+      <div class="kg-metric" id="kg-random-metric"></div>
+    </section>
+    <section class="kg-panel" aria-labelledby="kg-hard-title">
+      <h3 id="kg-hard-title">B · Hard-negative mining</h3>
+      <div class="kg-stage-title" id="kg-hard-pool-title"></div>
+      <div class="kg-pool"><svg id="kg-hard-pool" role="img" aria-label="Type-filtered hard pool"></svg></div>
+      <div class="kg-arrow">↓ Uniform sampling from the type-filtered pool</div>
+      <div class="kg-stage-title" id="kg-hard-batch-title"></div>
+      <div class="kg-pool"><svg id="kg-hard-batch" role="img" aria-label="Hard sampling batch"></svg></div>
+      <div class="kg-metric" id="kg-hard-metric"></div>
+    </section>
+  </div>
+  <div class="kg-summary" role="status" aria-live="polite" aria-atomic="true">
+    <strong id="kg-enrichment"></strong>
+    <p class="kg-note" id="kg-summary-counts"></p>
+    <p class="kg-note" id="kg-mode-note"></p>
+  </div>
+  <noscript><p>Enable JavaScript to use the controls. With Ng=100, Pu=10, Nh=50,
+    and k=10, expected contamination rises from 10% to 20%, with expected hidden-positive
+    counts of 1 and 2 per batch.</p></noscript>
+</div>
+
+<h2>What the comparison means</h2>
+<p>Because the hard pool contains all hidden positives, the probability that a
+uniformly sampled link is a hidden positive is <strong>Pu / Ng</strong> for random
+sampling and <strong>Pu / Nh</strong> for hard sampling. Multiplying these probabilities
+by <strong>k</strong> gives the expected hidden-positive counts per batch.</p>
+<p>With Ng = 100, Pu = 10, Nh = 50, and k = 10, expected contamination increases
+from <strong>10% to 20%</strong>, and the expected counts increase from <strong>1 to 2</strong>.
+For Pu &gt; 0, the enrichment ratio is <strong>Ng / Nh</strong>. If Nh equals Ng, the
+two methods have the same expected contamination. If Pu is zero, both rates are zero
+and their ratio is undefined.</p>
+<p><strong>Illustrative mode</strong> deliberately selects a batch with the expected
+number of hidden positives, rounded to the nearest integer when needed. It is a
+teaching example. <strong>Random mode</strong> independently samples each pool without
+replacement; a single batch can differ from its expectation or even reverse the
+ordering. Resampling keeps the constructed pools fixed.</p>
+<p>This example demonstrates what happens when type filtering enriches hidden
+positives. It does not imply that every hard-negative mining method does so.
+Here, “false-negative contamination” means the fraction of sampled negatives that
+are actually positive, rather than the classifier metric FN / (TP + FN).</p>
+
+<script>
+(() => {
+  'use strict';
+  const root = document.getElementById('kg-mining');
+  const el = name => root.querySelector('#kg-' + name);
+  const defaults = { Ng: 100, Pu: 10, Nh: 50, k: 10 };
+  const state = { ...defaults };
+  let full = [], hard = [];
+  const pct = value => (100 * value).toLocaleString(undefined, { maximumFractionDigits: 2 }) + '%';
+  const num = value => value.toLocaleString(undefined, { maximumFractionDigits: 3 });
+
+  function shuffle(items) {
+    const result = items.slice();
+    for (let i = result.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [result[i], result[j]] = [result[j], result[i]];
+    }
+    return result;
+  }
+
+  function constructPools() {
+    // A link's hidden truth and hard-pool membership persist across resamples.
+    full = shuffle(Array.from({ length: state.Ng }, (_, id) => ({
+      id, positive: id < state.Pu, hard: id < state.Nh
+    })));
+    hard = full.filter(link => link.hard);
+  }
+
+  function syncControls() {
+    state.Ng = Math.max(10, Math.min(500, state.Ng));
+    state.Nh = Math.max(1, Math.min(state.Ng, state.Nh));
+    state.Pu = Math.max(0, Math.min(state.Nh, state.Pu));
+    state.k = Math.max(1, Math.min(state.Nh, state.k));
+    el('Nh').max = state.Ng;
+    el('Pu').max = state.Nh;
+    el('k').max = state.Nh;
+    Object.keys(defaults).forEach(key => {
+      el(key).value = state[key];
+      el(key + '-value').textContent = state[key];
+    });
+    el('Nh-hint').textContent = `1–${state.Ng} links; a subset of Ng`;
+    el('Pu-hint').textContent = `0–${state.Nh} links; all inside Nh`;
+    el('k-hint').textContent = `1–${state.Nh} links per batch`;
+  }
+
+  function sample(pool, illustrative) {
+    if (!illustrative) return shuffle(pool).slice(0, state.k);
+    const count = Math.round(state.k * state.Pu / pool.length);
+    return shuffle([
+      ...shuffle(pool.filter(link => link.positive)).slice(0, count),
+      ...shuffle(pool.filter(link => !link.positive)).slice(0, state.k - count)
+    ]);
+  }
+
+  function draw(name, links, height, ringHard) {
+    const svg = el(name), width = 320;
+    const cols = Math.ceil(Math.sqrt(links.length * width / height));
+    const rows = Math.ceil(links.length / cols);
+    const dx = width / cols, dy = height / rows;
+    const radius = Math.min(8, dx * .29, dy * .29);
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    const count = links.filter(link => link.positive).length;
+    const description = `${links.length} links, including ${count} hidden positives`;
+    svg.setAttribute('aria-label', description);
+    svg.innerHTML = `<title>${description}</title>` + links.map((link, i) => {
+      const x = (i % cols + .5) * dx, y = (Math.floor(i / cols) + .5) * dy;
+      return `<g data-link-id="${link.id}" data-positive="${link.positive}" data-hard="${link.hard}">
+        <title>Link ${link.id + 1}: ${link.positive ? 'hidden positive' : 'true negative'}${link.hard ? ', in hard pool' : ''}</title>
+        ${ringHard && link.hard ? `<circle cx="${x}" cy="${y}" r="${radius + 2}" fill="none" stroke="#2369b0" stroke-width="1.2"/>` : ''}
+        <circle cx="${x}" cy="${y}" r="${radius}" fill="${link.positive ? '#32834c' : '#b9c2ce'}"/>
+        ${link.positive ? `<circle cx="${x}" cy="${y}" r="${radius * .35}" fill="#123b24"/>` : ''}
+      </g>`;
+    }).join('');
+  }
+
+  function render() {
+    const illustrative = el('mode').value === 'illustrative';
+    const randomBatch = sample(full, illustrative), hardBatch = sample(hard, illustrative);
+    const randomCount = randomBatch.filter(link => link.positive).length;
+    const hardCount = hardBatch.filter(link => link.positive).length;
+    const expectedRandom = state.k * state.Pu / state.Ng;
+    const expectedHard = state.k * state.Pu / state.Nh;
+    const label = illustrative ? 'Illustrative batch' : 'Actual random draw';
+    el('full-title').textContent = `Full pool: Ng = ${state.Ng}, Pu = ${state.Pu}`;
+    el('hard-pool-title').textContent = `Type-filtered pool: Nh = ${state.Nh}, all ${state.Pu} hidden positives`;
+    el('random-batch-title').textContent = `${label}: k = ${state.k}`;
+    el('hard-batch-title').textContent = `${label}: k = ${state.k}`;
+    el('resample').textContent = illustrative ? 'Rearrange example' : 'Resample';
+    draw('full', full, 230, true);
+    draw('hard-pool', hard, 230, false);
+    draw('random-batch', randomBatch, 130, false);
+    draw('hard-batch', hardBatch, 130, false);
+    [['random', state.Ng, randomCount], ['hard', state.Nh, hardCount]].forEach(([name, size, count]) => {
+      el(name + '-metric').innerHTML = `<span>Expected contamination</span>
+        <strong>${state.Pu} / ${size} = ${pct(state.Pu / size)}</strong>
+        <p>Expected hidden positives per batch: <b>${num(state.k * state.Pu / size)}</b></p>
+        <p>${label}: <b>${count} / ${state.k}</b> hidden positives (${pct(count / state.k)})</p>`;
+    });
+    el('enrichment').textContent = state.Pu === 0
+      ? 'Both contamination rates are zero; enrichment is undefined (0 / 0).'
+      : `Expected contamination enrichment: ${num(state.Ng / state.Nh)}×`;
+    el('summary-counts').textContent = `Expected hidden positives: ${num(expectedRandom)} vs ${num(expectedHard)}. Displayed: ${randomCount} vs ${hardCount}.`;
+    const exact = Math.abs(randomCount - expectedRandom) < 1e-10 && Math.abs(hardCount - expectedHard) < 1e-10;
+    el('mode-note').textContent = illustrative
+      ? (exact ? 'Illustrative batches matching the expectation.' : 'Illustrative batches matching rounded expected counts; numerical expectations are shown separately.')
+      : 'Independent uniform draws without replacement. Individual batches may differ from the expectation.';
+  }
+
+  Object.keys(defaults).forEach(key => el(key).addEventListener('input', () => {
+    state[key] = Number(el(key).value);
+    syncControls();
+    if (key !== 'k') constructPools();
+    render();
+  }));
+  el('mode').addEventListener('change', render);
+  el('resample').addEventListener('click', render);
+  el('reset').addEventListener('click', () => {
+    Object.assign(state, defaults);
+    el('mode').value = 'illustrative';
+    syncControls();
+    constructPools();
+    render();
+  });
+  syncControls();
+  constructPools();
+  render();
+})();
+</script>
